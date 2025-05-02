@@ -9,6 +9,7 @@ export const TodoApp = () => {
   // const { data: todo = [], isLoading } = useGetTodosQuery(todoId);
   const { data: todo, isLoading } = useGetTodoByIdQuery(todoId);
 
+  // 2 FUniones donde sumara 1 y regresara 1
   const nextTodo = () => {
     setTodoId(todoId + 1 )
   }
@@ -22,9 +23,10 @@ export const TodoApp = () => {
     <>
         <h1>Todos - RTK- Query</h1>
         <hr/>
-
+        {/* El ternario cada que cargue se pondra en false */}
         <h4>isLoading...{isLoading ? 'True' : 'Falae'}</h4>
 
+        {/* El http que usamos en el Api son json y qui los podemos ver */}
         <pre>{ JSON.stringify( todo ) }</pre>
 
         <button onClick={previoTodo}>

@@ -11,6 +11,8 @@ export default configureStore({
     reducer: {
         counter: counterSlice.reducer,
         pokemon: pokemonSlice.reducer,
+        //o TodoApi.reducerPath es una clave dinámica que Redux Toolkit
+        //  usa para almacenar los datos de la API en el estado global.
         [TodoApi.reducerPath]: TodoApi.reducer,
     },
     middleware: ( getDefaulMiddleware ) => getDefaulMiddleware()
